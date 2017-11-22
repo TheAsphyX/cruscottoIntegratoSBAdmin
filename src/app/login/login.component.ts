@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { routerTransition } from '../router.animations';
+
+import { AlertService, AuthenticationService, UserService } from '../_services/index';
 
 @Component({
     selector: 'app-login',
@@ -9,11 +11,56 @@ import { routerTransition } from '../router.animations';
     animations: [routerTransition()]
 })
 export class LoginComponent implements OnInit {
-    constructor(public router: Router) {}
+    model: any = {};
+    modelr: any =  {};
+    loading = false;
+    returnUrl: string;
 
-    ngOnInit() {}
+    constructor(
+        private route: ActivatedRoute,
+        private router: Router,
+        private userService: UserService,
+        private authenticationService: AuthenticationService,
+        private alertService: AlertService) {}
+
+    ngOnInit() {
+        // reset login status
+        this.authenticationService.logout();
+        
+                // get return url from route parameters or default to '/'
+                this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+                console.log("qui...");
+    }
 
     onLoggedin() {
-        localStorage.setItem('isLoggedin', 'true');
+        console.log("pure qui..."+this.model.username+this.model.password);
+        this.loading = true;
+        //creazione utente fittizio.
+        this.modelr.username = "vvf";
+        this.modelr.password = "vvf";
+        this.userService.create(this.modelr)
+        .subscribe(
+            data => {
+                this.alertService.success('Registration successful', true);
+             //   this.router.navigate(['/login']);
+            },
+            error => {
+                this.alertService.error(error);
+                this.loading = false;
+            });
+
+        this.authenticationService.login(this.model.username, this.model.password)
+            .subscribe(
+                data => {
+                    console.log("in routing..");
+                    this.router.navigate([this.returnUrl]);
+                    console.log("routati");
+                },
+                error => {
+                    console.log("errore autenticazione."+error);
+                    this.alertService.error(error);
+                    this.loading = false;
+                });
+        //localStorage.setItem('isLoggedin', 'true');
     }
 }
