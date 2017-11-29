@@ -36,12 +36,13 @@ export class LoginComponent implements OnInit {
         console.log("pure qui..."+this.model.username+this.model.password);
         this.loading = true;
         //creazione utente fittizio.
+        localStorage.removeItem('users');
         this.modelr.username = "vvf";
         this.modelr.password = "vvf";
         this.userService.create(this.modelr)
         .subscribe(
             data => {
-                this.alertService.success('Registration successful', true);
+             //   this.alertService.success('Registration successful', true);
              //   this.router.navigate(['/login']);
             },
             error => {
