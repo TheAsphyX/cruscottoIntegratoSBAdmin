@@ -3,20 +3,25 @@
         <div class="col-md-4">
             <img src="assets/images/Fiamma.png" width="150px" class="user-avatar" />
             <h1>SO VVF</h1>
-            <alert></alert>
             <form role="form">
                 <div class="form-content">
                     <div class="form-group">
-                        <input type="text" name="username" [(ngModel)]="model.username" #username="ngModel" class="form-control input-underline input-lg" id="" placeholder="Nome Utente">
+                        <input type="text" name="username" [(ngModel)]="model.username" #username="ngModel" class="form-control input-underline input-lg"
+                            id="" placeholder="Nome Utente">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" name="password" [(ngModel)]="model.password" #username="ngModel" class="form-control input-underline input-lg" id="" placeholder="Password">
+                        <input type="password" name="password" [(ngModel)]="model.password" #username="ngModel" class="form-control input-underline input-lg"
+                            id="" placeholder="Password">
                     </div>
                 </div>
                 <a class="btn rounded-btn" [routerLink]="['/dashboard']" (click)="onLoggedin()"> Entra </a>
                 &nbsp;
-                <br><br><a class="text-muted" href="https://accounts.dipvvf.it/">Gestione credenziali di accesso.</a> 
+                <br>
+                
+                <br>
+                <alert></alert>
+                <a class="text-muted" href="https://accounts.dipvvf.it/">Gestione credenziali di accesso.</a>
                 <!--<a class="btn rounded-btn" [routerLink]="['/signup']">Register</a>-->
             </form>
         </div>
