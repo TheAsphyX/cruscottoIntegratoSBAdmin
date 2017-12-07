@@ -30,11 +30,13 @@ export class LoginComponent implements OnInit {
                 // get return url from route parameters or default to '/'
                 this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
                 console.log("qui...");
+                console.log("loading = "+this.loading);
     }
 
     onLoggedin() {
         console.log("pure qui..."+this.model.username+this.model.password);
         this.loading = true;
+        console.log("loading = "+this.loading);
         //creazione utente fittizio.
         localStorage.removeItem('users');
         this.modelr.username = "vvf";
