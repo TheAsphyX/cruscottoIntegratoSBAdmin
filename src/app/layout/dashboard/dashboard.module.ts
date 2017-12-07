@@ -9,6 +9,7 @@ import {
     NotificationComponent,
     ChatComponent
 } from './components';
+import { InfoAggregateComponent } from "../bs-component/components";
 import { StatModule } from '../../shared';
 
 @NgModule({
@@ -23,7 +24,8 @@ import { StatModule } from '../../shared';
         DashboardComponent,
         TimelineComponent,
         NotificationComponent,
-        ChatComponent
+        ChatComponent,
+        InfoAggregateComponent
     ]
 })
 export class DashboardModule {}

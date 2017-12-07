@@ -17,7 +17,7 @@ import {
     ProgressbarComponent,
     TabsComponent,
     TooltipComponent,
-    TimepickerComponent
+    TimepickerComponent    
 } from './components';
 import { PageHeaderModule } from '../../shared';
 

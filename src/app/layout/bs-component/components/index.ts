@@ -10,3 +10,4 @@ export * from './progressbar/progressbar.component';
 export * from './tabs/tabs.component';
 export * from './tooltip/tooltip.component';
 export * from './timepicker/timepicker.component';
+export * from './info-aggregate/info-aggregate.component';
