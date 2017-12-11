@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SchedaTelefonataComponent } from './scheda-telefonata.component';
+import { FormChiamataComponent } from './form-chiamata.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: SchedaTelefonataComponent
+        component: FormChiamataComponent
     }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class BlankPageRoutingModule {}
+export class FormChiamataRoutingModule {}

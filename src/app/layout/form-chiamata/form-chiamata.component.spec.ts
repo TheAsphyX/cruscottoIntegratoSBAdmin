@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SchedaTelefonataComponent } from './scheda-telefonata.component';
+import { FormChiamataComponent } from './form-chiamata.component';
 
 describe('BlankPageComponent', () => {
-    let component: SchedaTelefonataComponent;
-    let fixture: ComponentFixture<SchedaTelefonataComponent>;
+    let component: FormChiamataComponent;
+    let fixture: ComponentFixture<FormChiamataComponent>;
 
     beforeEach(
         async(() => {
             TestBed.configureTestingModule({
-                declarations: [SchedaTelefonataComponent]
+                declarations: [FormChiamataComponent]
             }).compileComponents();
         })
     );
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(SchedaTelefonataComponent);
+        fixture = TestBed.createComponent(FormChiamataComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
