@@ -113,7 +113,7 @@ Funzia!!!
               <div class="input-group-addon" pTooltip="Ragione sociale" tooltipPosition="bottom" data-animation="false" style="min-width: 50px;">
               <i class="fa fa-industry" aria-hidden="true"></i>
               </div>
-              <input type="text" class="form-control" id="ragione_sociale" placeholder="Ragione sociale" value="{{formChiamataModel.ragioneSociale}}"
+              <input type="text" class="form-control" id="ragione_sociale" placeholder="Ragione sociale" value=""
                 formControlName="ragione_sociale">
             </div>
           </div>
@@ -242,7 +242,7 @@ Funzia!!!
           <!--<img class="center-block img-fluid" src="https://maps.googleapis.com/maps/api/staticmap?center=via+cavou+5+roma&amp;zoom=18&amp;size=1000x310&amp;sensor=false">            -->
           <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [streetViewControl]="true" [mapTypeControl]="true"
             [scaleControl]="true" [zoom]="zoom">
-            <agm-marker [latitude]="latitude" [longitude]="longitude" [label]="'C'" [title]="pippo" [openInfoWindow]=true>
+            <agm-marker [latitude]="latitude" [longitude]="longitude" [label]="'C'" [title]="" [openInfoWindow]=true>
               <agm-info-window>
                 <strong>Chiamata numero {{formChiamataModel.numeroChiamata}}</strong>
               </agm-info-window>
