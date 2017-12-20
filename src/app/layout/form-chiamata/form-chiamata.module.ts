@@ -14,6 +14,7 @@ import {AutoCompleteModule, GrowlModule, TooltipModule, ChipsModule} from 'prime
 import { RicercaTipologieService } from "./ricerca-tipologie/ricerca-tipologie.service";
 import { RicercaService } from "./ricerca/ricerca.service";
 import { DataBaseService } from "./db/data-base.service";
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     imports: [
@@ -26,6 +27,7 @@ import { DataBaseService } from "./db/data-base.service";
           ReactiveFormsModule,
         CommonModule, 
         FormChiamataRoutingModule,
+        NgbDropdownModule,
         AutoCompleteModule,
         GrowlModule,
         TooltipModule,
