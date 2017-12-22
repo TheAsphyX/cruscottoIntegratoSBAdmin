@@ -18,6 +18,8 @@ import { RisultatoRicerca } from "./ricerca/risultato-ricerca";
 import { Punto } from "./shared/classes/geo/punto";
 import { DataBaseService } from "./db/data-base.service";
 
+import {MenuItem, ButtonModule} from 'primeng/primeng';
+
 
 @Component({
   selector: 'app-form-chiamata',
@@ -25,6 +27,8 @@ import { DataBaseService } from "./db/data-base.service";
   styleUrls: ['./form-chiamata.component.scss']
 })
 export class FormChiamataComponent implements OnInit {
+  items: MenuItem[];
+
   // risultati: TipologiaIntervento[];
 
   risultati: RisultatoRicerca[];
@@ -66,6 +70,16 @@ export class FormChiamataComponent implements OnInit {
 
   ngOnInit() {
     console.log("ngoninit!");
+    this.items = [
+      {label: 'Intervento non più necessario', icon: 'fa-refresh', command: () => {
+        //  this.update();
+      }},
+      {label: 'Falso allarme', icon: 'fa-close', command: () => {
+        //  this.delete();
+      }},
+      {label: 'Angular.io', icon: 'fa-link', url: 'http://angular.io'},
+      {label: 'Theming', icon: 'fa-paint-brush', routerLink: ['/theming']}
+];
     this.myForm = this.fb.group({
       //'nome': [this.formChiamataModel.nome],
       //'cognome': [this.formChiamataModel.cognome, Validators.compose([Validators.required, this.validaCognome])],

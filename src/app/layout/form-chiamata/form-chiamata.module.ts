@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AgmCoreModule } from "@agm/core";
-import {AutoCompleteModule, GrowlModule, TooltipModule, ChipsModule} from 'primeng/primeng';
+import {AutoCompleteModule, GrowlModule, TooltipModule, ChipsModule, SplitButtonModule} from 'primeng/primeng';
 
 import { RicercaTipologieService } from "./ricerca-tipologie/ricerca-tipologie.service";
 import { RicercaService } from "./ricerca/ricerca.service";
@@ -30,6 +30,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
         NgbDropdownModule,
         AutoCompleteModule,
         GrowlModule,
+        SplitButtonModule,
         TooltipModule,
         ChipsModule ],
     declarations: [FormChiamataComponent],
