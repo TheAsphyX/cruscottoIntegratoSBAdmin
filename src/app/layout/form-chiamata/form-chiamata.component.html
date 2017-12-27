@@ -301,7 +301,7 @@
                   <p-growl [(value)]="msgs" [life]=3000 [baseZIndex]=50></p-growl>
                   <p-growl [(value)]="msgsErrori" [sticky]="true" [baseZIndex]=50></p-growl>
                
-                  <p-splitButton label="Conferma" icon="fa-check" (onClick)="onSubmit(formRagSoc.value)" [disabled]="formRagSoc.valid" [model]="items"></p-splitButton>
+                  <p-splitButton styleClass="custom-background-style" label="Conferma" icon="fa-check" (onClick)="onSubmit(formRagSoc.value)" [disabled]="formRagSoc.valid" [model]="items"></p-splitButton>
                   <button pButton type="button" style="background-color:#868E96; color:#ffffff"  (click)="onClickAnnulla()" label="Annulla"></button>
                 </div>
                 

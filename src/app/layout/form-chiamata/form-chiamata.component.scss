@@ -28,6 +28,23 @@
       background-color: #a5a8aa!important;
       color: #292b2c!important;    
   }*/
+
+  /* Colore background e opacità pulsante conferma */
+    :host /deep/ .ui-splitbutton.custom-background-style .ui-button {
+        background-color: #868E96;
+    }
+
+    :host /deep/ .ui-state-disabled .ui-widget:disabled {
+        opacity: .85;
+        filter: Alpha(Opacity= 85);
+        background-image: none;
+        cursor: default !important;
+    }
+
+    :host /deep/ .ui-splitbutton.ui-buttonset .ui-button:hover {
+        background-color: #bf0266;
+        color: #ffffff;
+    }
   
   /* stile del dropdown multiselect (TAG) */
   :host /deep/ button.dropdown-toggle.btn.btn-default.btn-secondary.btn-block{
