@@ -202,11 +202,17 @@ export class FormChiamataComponent implements OnInit {
     console.log("Dropdown click!");
     this._ricercaService.ricercaFrequent()
       .subscribe(data => {
-        this.risultati = [];
+        this.risultati = [];   
+        /*
+        console.log("1");
         setTimeout(() => {
+          console.log("2");
           this.risultati = data;
-        }, 100)
-
+        }, 1000);
+        console.log("3");
+        */
+        this.risultati = data;
+        
       });
   }
 

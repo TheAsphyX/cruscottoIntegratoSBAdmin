@@ -149,6 +149,8 @@ export class RicercaTipologieService {
         this.risultatiFreq.push(a);
     })
 
+    console.log("interventi frequenti trovati "+this.risultatiFreq.length);
+    
     return this.risultatiFreq;
 
   }
