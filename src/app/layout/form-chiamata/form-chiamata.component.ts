@@ -20,11 +20,14 @@ import { DataBaseService } from "./db/data-base.service";
 
 import {MenuItem, ButtonModule} from 'primeng/primeng';
 
+import { routerTransition } from '../../router.animations';
+
 
 @Component({
   selector: 'app-form-chiamata',
   templateUrl: './form-chiamata.component.html',
-  styleUrls: ['./form-chiamata.component.scss']
+  styleUrls: ['./form-chiamata.component.scss'],
+  animations: [routerTransition()]
 })
 export class FormChiamataComponent implements OnInit {
   items: MenuItem[];
