@@ -11,7 +11,7 @@
   
         <div class="row">
           <div class="col-md-6">
-            <p-tree [value]="primeNgTrees" selectionMode="single" [(selection)]="selectedFile" 
+            <p-tree [value]="primeNgTrees" selectionMode="single" 
             (onNodeSelect)="nodeSelect($event)" (onNodeUnselect)="nodeUnselect($event)">
             </p-tree>
           </div>
@@ -33,7 +33,7 @@
     <div class="col-md-6">
       <p-fieldset legend="Chi">
         <div class="input-group">
-          <p-autoComplete [(ngModel)]="nominativo" [suggestions]="filteredNames" (completeMethod)="filterNameSingle($event)" [size]="20"
+          <p-autoComplete [(ngModel)]="nominativo" [suggestions]="filteredNames" [size]="20"
             placeholder="Cerca nominativo..." [minLength]="1"></p-autoComplete>
             <button class="btn" type="button" (click)="clearSearchText()">
               <i class="fa fa-times" aria-hidden="true"></i>
@@ -74,12 +74,12 @@
       <p-fieldset legend="Quando">
         <div class="col-md-6">
          <p-fieldset legend="Da">
-           <p-calendar [(ngModel)]="dataInizioPermesso" [locale]="it" [minDate]="today" [showIcon]="true" showButtonBar="true"></p-calendar> <span style="margin-left:35px">{{dataInizio|date}}</span>
+           <p-calendar [locale]="it" [showIcon]="true" showButtonBar="true"></p-calendar> <span style="margin-left:35px">{{dataInizio|date}}</span>
          </p-fieldset>
         </div>
         <div class="col-md-6">
          <p-fieldset legend="A">
-          <p-calendar [(ngModel)]="dataFinePermesso" [locale]="it" [showIcon]="true" [monthNavigator]="true" [yearNavigator]="true" yearRange="2017:2037"></p-calendar> <span style="margin-left:35px">{{dataFine|date}}</span>
+          <p-calendar [locale]="it" [showIcon]="true" [monthNavigator]="true" [yearNavigator]="true" yearRange="2017:2037"></p-calendar> <span style="margin-left:35px">{{dataFine|date}}</span>
          </p-fieldset>
         </div>
       </p-fieldset>

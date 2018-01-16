@@ -35,7 +35,7 @@ export class GestionepermessiComponent implements OnInit {
     ricorsivo: boolean = true;
 
     //private situazionePermessi: SituazionePermessi;
-    private primeNgTrees = [];
+    primeNgTrees = [];
     private testoRicerca: string;
     checkNodeSelected: boolean = false;
     permessiAssegnati: PermessoAssegnato[];
@@ -119,11 +119,11 @@ export class GestionepermessiComponent implements OnInit {
         }
     }
 
-    private clearSearchText(): void {
+    clearSearchText(): void {
         this.nominativo = null;
     }
 
-    private assegnaPermesso() {
+    assegnaPermesso() {
         this.confirmationService.confirm({
             message: 'Sei sicuro di voler assegnare i permessi selezionati?',
             header: 'Confirmation',
