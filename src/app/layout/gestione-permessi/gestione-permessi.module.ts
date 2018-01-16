@@ -37,6 +37,9 @@ import { TruncatePipe } from './shared/pipes/truncate.pipe';
 
 import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
 
+import { TagAutistaComponent } from "./shared/components/tag-autista/tag-autista.component";
+import { TagCapopartenzaComponent } from "./shared/components/tag-capopartenza/tag-capopartenza.component";
+
 @NgModule({
     imports: [CommonModule, GestionePermessiRoutingModule,
         //BrowserModule,
@@ -55,6 +58,8 @@ import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
         InputSwitchModule],
     declarations: [
         GestionepermessiComponent,
+        TagAutistaComponent,
+        TagCapopartenzaComponent,
         FriendlyDatePipe,
         FriendlyHourPipe,
         TruncatePipe],
