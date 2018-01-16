@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GestionePermessiComponent } from './gestione-permessi.component';
+import {  GestionepermessiComponent } from './gestione-permessi.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: GestionePermessiComponent
+        component: GestionepermessiComponent
     }
 ];
 
