@@ -4,11 +4,13 @@
             <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
         </a>
         <div class="nested-menu">
-            <a class="list-group-item" (click)="addExpandClass('pages')">
+            <a class="list-group-item" (click)="addExpandClass('amministrazione')">
                 <span>
-                    <i class="fa fa-plus"></i>&nbsp; {{ 'Amministrazione' | translate }}</span>
+                    <div *ngIf="isActive; else elseBlock"><i class="fa fa-minus"></i>&nbsp; {{ 'Amministrazione' | translate }}</div>
+                    <ng-template #elseBlock><i class="fa fa-plus"></i>&nbsp; {{ 'Amministrazione' | translate }}</ng-template>
+                </span>
             </a>
-            <li class="nested" [class.expand]="showMenu === 'pages'">
+            <li class="nested" [class.expand]="showMenu === 'amministrazione'">
                 <ul class="submenu">
                     <li>
                         <a [routerLink]="['/gestione-permessi']" [routerLinkActive]="['router-link-active']" class="list-group-item">

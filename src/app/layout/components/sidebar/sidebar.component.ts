@@ -19,6 +19,7 @@ export class SidebarComponent {
         } else {
             this.showMenu = element;
         }
+        this.eventCalled();
     }
 
     onLoggedout() {
