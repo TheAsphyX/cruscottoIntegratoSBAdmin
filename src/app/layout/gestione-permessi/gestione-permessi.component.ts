@@ -18,11 +18,14 @@ import { PermessoAssegnato } from "./permesso-assegnato.model";
 import { UnitaOperativa } from "./unita-operativa.model";
 import { NuovoPermesso } from './nuovo-permesso.model';
 
+import { routerTransition } from '../../router.animations';
+
 
 @Component({
     selector: 'app-gestionepermessi',
     templateUrl: './gestione-permessi.component.html',
-    styleUrls: ['./gestione-permessi.component.scss']
+    styleUrls: ['./gestione-permessi.component.scss'],
+    animations: [routerTransition()]
 })
 export class GestionepermessiComponent implements OnInit {
     //@Input() permessoAssegnato: PermessoAssegnato;
