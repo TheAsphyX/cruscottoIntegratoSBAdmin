@@ -3,14 +3,14 @@
       <p-fieldset legend="Dove" [ngStyle]="{backgroundColor: '#60979f'}">
       
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-12">
             <button class="btn" type="button" (click)="expandAll()" >Espandi tutto</button>
             <button class="btn" type="button" (click)="collapseAll()" >Chiudi tutto</button>
           </div>
         </div>
   
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-10">
             <p-tree [value]="primeNgTrees" selectionMode="single" 
             (onNodeSelect)="nodeSelect($event)" (onNodeUnselect)="nodeUnselected($event)">
             </p-tree>
@@ -22,7 +22,7 @@
         </div>
         
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-12">
             <p-checkbox label="cerca solo nel nodo selezionato" [(ngModel)]="checkNodeSelected" binary="true"></p-checkbox>
           </div>
         </div>
@@ -48,7 +48,7 @@
   <div class="row">
     <div class="col-md-6">
       <p-fieldset legend="Cosa">
-        <div class="col-md-3">
+        <div class="col-md-12">
           <p-fieldset legend="Ruoli">
           <!-- <i *ngFor="let ruoli of ruoliSelezionati" style="margin-right:10px">{{ruoli}}</i> -->
             <div class="ui-g-12"><p-checkbox name="group1" value="Ruolo 1" label="Ruolo 1" [(ngModel)]="ruoliSelezionati"></p-checkbox></div>
@@ -58,7 +58,7 @@
           </p-fieldset>
         </div> 
         
-        <div class="col-md-4">
+        <div class="col-md-12">
           <p-fieldset legend="Permessi">
           <!-- <i *ngFor="let permessi of permessiSelezionati" style="margin-right:10px">{{permessi}}</i> -->
             <div class="ui-g-12"><p-checkbox name="group1" value="Permesso 1" label="Permesso 1" [(ngModel)]="permessiSelezionati"></p-checkbox></div>
@@ -72,12 +72,12 @@
     
     <div class="col-md-6">
       <p-fieldset legend="Quando">
-        <div class="col-md-6">
+        <div class="col-md-12">
          <p-fieldset legend="Da">
            <p-calendar [locale]="it" [showIcon]="true" showButtonBar="true"></p-calendar> <span style="margin-left:35px">{{dataInizio|date}}</span>
          </p-fieldset>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
          <p-fieldset legend="A">
           <p-calendar [locale]="it" [showIcon]="true" [monthNavigator]="true" [yearNavigator]="true" yearRange="2017:2037"></p-calendar> <span style="margin-left:35px">{{dataFine|date}}</span>
          </p-fieldset>
@@ -95,7 +95,7 @@
   <br>
   
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-12">
       <p-confirmDialog></p-confirmDialog>
     </div>
   </div>
@@ -137,7 +137,7 @@
   
             <p-column field="Azioni" header="Azioni" [style]="{'text-align': 'center'}">
               <ng-template let-col let-bol="rowData" pTemplate="body">
-                <a href="#" (click)="eliminaPermesso()">
+                <a (click)="eliminaPermesso()">
                 <i class="fa fa-trash" aria-hidden="true" title="Elimina il permesso"></i>
               </a>
               </ng-template>
