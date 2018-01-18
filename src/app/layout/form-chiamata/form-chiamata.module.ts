@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 
 import { FormChiamataRoutingModule } from './form-chiamata-routing.module';
 import { FormChiamataComponent } from './form-chiamata.component';
+import { BlankPageComponent } from "../blank-page/blank-page.component";
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AgmCoreModule } from "@agm/core";
-import {AutoCompleteModule, GrowlModule, TooltipModule, ChipsModule, SplitButtonModule} from 'primeng/primeng';
+import {AutoCompleteModule, GrowlModule, TooltipModule, ChipsModule, SplitButtonModule, DialogModule} from 'primeng/primeng';
 
 import { RicercaTipologieService } from "./ricerca-tipologie/ricerca-tipologie.service";
 import { RicercaService } from "./ricerca/ricerca.service";
@@ -32,8 +33,9 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
         GrowlModule,
         SplitButtonModule,
         TooltipModule,
+        DialogModule,
         ChipsModule ],
-    declarations: [FormChiamataComponent],
+    declarations: [FormChiamataComponent, BlankPageComponent],
     providers: [RicercaService, RicercaTipologieService, DataBaseService]
 })
 export class FormChiamataModule {}

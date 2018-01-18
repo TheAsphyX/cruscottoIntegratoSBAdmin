@@ -20,7 +20,11 @@ import { DataBaseService } from "./db/data-base.service";
 
 import {MenuItem, ButtonModule} from 'primeng/primeng';
 
+import {DialogModule} from 'primeng/primeng';
+
 import { routerTransition } from '../../router.animations';
+
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -31,6 +35,8 @@ import { routerTransition } from '../../router.animations';
 })
 export class FormChiamataComponent implements OnInit {
   items: MenuItem[];
+
+  display: boolean = false;
 
   // risultati: TipologiaIntervento[];
 
@@ -62,7 +68,7 @@ export class FormChiamataComponent implements OnInit {
   model: number[] = [];
 
   constructor( @Inject(FormBuilder) private fb: FormBuilder, private fb2: FormBuilder, private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone, private _ricercaTipologieService: RicercaTipologieService, private _ricercaService: RicercaService, private _dataBaseService: DataBaseService) {
+    private ngZone: NgZone, private _ricercaTipologieService: RicercaTipologieService, private _ricercaService: RicercaService, private _dataBaseService: DataBaseService, private router: Router) {
     this.formChiamataModel = new FormChiamataModel();
     this.formChiamataModel.numeroChiamata = "123.4567.890";
     this.formChiamataModel.operatore = "Mario Rossi";
@@ -195,6 +201,16 @@ export class FormChiamataComponent implements OnInit {
       .subscribe(data => {
         this.risultati = data;
       });
+  }
+
+  vaiSchedaContatto(event){
+   // console.log("click!");
+    this.router.navigateByUrl('/blank-page');
+    
+  }
+
+    showDialog() {
+      this.display = true;
   }
 
   // gestione dropdown sul pulsante tipologie di intervento frquenti.

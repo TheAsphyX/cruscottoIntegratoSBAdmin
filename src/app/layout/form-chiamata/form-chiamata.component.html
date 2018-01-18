@@ -52,15 +52,20 @@
         <input type="text" class="form-control" id="operatore" aria-describedby="basic-addon3" readonly="" placeholder="{{formChiamataModel.operatore}}"> </div>
     </div>
 
-    <div class="col-lg-1">
-      <!--
-          <i class="fa fa-compress text-muted" style="font-size: 33px;" pTooltip="Scheda contatto N° {{formChiamataModel.scheda_contatto}}" tooltipPosition="bottom"
-            data-placement="bottom"></i>
-              <a [routerLink]="['schedaContatto', '../../schedaContatto/app.module#AppModule']">Scheda Contatto</a>          
-  -->
+    <div class="col-lg-1 d-flex align-items-center ui-g ui-fluid">
+         <!-- <i class="fa fa-compress text-muted" style="font-size: 25px;" pTooltip="Scheda contatto N° {{formChiamataModel.scheda_contatto}}" tooltipPosition="bottom"
+            data-placement="bottom"></i> 
+              <a [routerLink]="['schedaContatto', '../../schedaContatto/app.module#AppModule']"></a>  -->  
+              <p-dialog header="Scheda contatto" [(visible)]="display" width="600" [responsive]="true">
+                    <!-- <p-footer>
+                        <button type="button" pButton icon="fa-check" (click)="display=false" label="Yes"></button>
+                        <button type="button" pButton icon="fa-close" (click)="display=false" label="No"></button>
+                    </p-footer> -->
+                    <app-blank-page></app-blank-page>
+              </p-dialog>
 
-
-
+              <button pButton type="button" class="ui-button-secondary" icon="fa-compress text-muted" pTooltip="Scheda contatto N° {{formChiamataModel.scheda_contatto}}" tooltipPosition="top"
+              data-placement="bottom" (click)="showDialog()"></button>      
     </div>
   </div>
   <hr>
