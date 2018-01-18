@@ -8,6 +8,6 @@ import { InfoAggregateModule } from '../../shared';
 
 @NgModule({
     imports: [CommonModule, BlankPageRoutingModule, InfoAggregateModule],
- //   declarations: [BlankPageComponent]
+    declarations: [BlankPageComponent]
 })
 export class BlankPageModule {}

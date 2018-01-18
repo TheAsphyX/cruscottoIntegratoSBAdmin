@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 
 import { FormChiamataRoutingModule } from './form-chiamata-routing.module';
 import { FormChiamataComponent } from './form-chiamata.component';
-import { BlankPageComponent } from "../blank-page/blank-page.component";
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -35,7 +34,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
         TooltipModule,
         DialogModule,
         ChipsModule ],
-    declarations: [FormChiamataComponent, BlankPageComponent],
+    declarations: [FormChiamataComponent],
     providers: [RicercaService, RicercaTipologieService, DataBaseService]
 })
 export class FormChiamataModule {}
