@@ -17,6 +17,7 @@ const routes: Routes = [
             { path: 'grid', loadChildren: './grid/grid.module#GridModule', canActivate: [AuthGuard]  },
             { path: 'components', loadChildren: './bs-component/bs-component.module#BsComponentModule', canActivate: [AuthGuard]  },
             { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule', canActivate: [AuthGuard]  },
+            { path: 'scheda-contatto', loadChildren: './scheda-contatto/scheda-contatto.module#SchedaContattoModule', canActivate: [AuthGuard]  },
             { path: 'gestione-permessi', loadChildren: './gestione-permessi/gestione-permessi.module#GestionePermessiModule', canActivate: [AuthGuard]  },
             { path: 'form-chiamata', loadChildren: './form-chiamata/form-chiamata.module#FormChiamataModule', canActivate: [AuthGuard]  }
         ]
