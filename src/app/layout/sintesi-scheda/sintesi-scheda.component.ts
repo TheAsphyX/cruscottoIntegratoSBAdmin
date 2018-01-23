@@ -32,7 +32,7 @@ export class SintesiSchedaComponent implements OnInit {
    * restituisce un vettore con tanti elementi quanto è la priorità dell'intervento.
    * Utile per eseguire un ngFor con i pallini.
    */
-  private vettorePallini() {
+  vettorePallini() {
     return new Array(this.scheda.priorita);
   }
 
@@ -40,12 +40,12 @@ export class SintesiSchedaComponent implements OnInit {
    * restituisce un vettore con tanti elementi quanti sono i buchini della priorità dell'intervento.
    * Utile per eseguire un ngFor con i buchini.
    */
-  private vettoreBuchini() {
+  vettoreBuchini() {
     const MAX_PRIORITA = 5;
     return new Array(MAX_PRIORITA - this.scheda.priorita);
   }
 
-  private mostraDettaglio() {
+  mostraDettaglio() {
     this.showDetail.emit(this.scheda);
   }
 }

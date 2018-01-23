@@ -21,9 +21,9 @@ export class ListaSchedeComponent implements OnInit {
 @Output() showDetail: EventEmitter<SchedaContatto> = new EventEmitter();
 
   private tutteLeSchede: SchedaContatto[];
-  private schedeFiltrate: SchedaContatto[];
+  schedeFiltrate: SchedaContatto[];
   private errorMessage: string;
-  private testoRicerca: string;
+  testoRicerca: string;
 
   constructor(private router: Router, private listaSchedeService_FakeJson: ListaSchedeService_FakeJson) { }
 
@@ -102,7 +102,7 @@ export class ListaSchedeComponent implements OnInit {
     return v;
   }
 
-  private clearSearchText(): void {
+  clearSearchText(): void {
     this.testoRicerca = null;
     this.aggiornaSchedeFiltrate();
   }
