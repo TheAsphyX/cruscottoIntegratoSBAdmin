@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" [@routerTransition]>
     <div class="col-10">
         <app-sintesi-scheda *ngFor="let s of schedeFiltrate" [scheda]="s" (showDetail)="visualizzaScheda(s)" class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4"></app-sintesi-scheda>
     </div>

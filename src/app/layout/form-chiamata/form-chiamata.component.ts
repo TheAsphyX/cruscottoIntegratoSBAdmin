@@ -205,7 +205,7 @@ export class FormChiamataComponent implements OnInit {
 
   vaiSchedaContatto(event){
    // console.log("click!");
-    this.router.navigateByUrl('/blank-page');
+    this.router.navigateByUrl('/lista-schede');
     
   }
 

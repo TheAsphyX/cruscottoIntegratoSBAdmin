@@ -3,12 +3,14 @@ import { SchedaContatto } from "../scheda-contatto/scheda-contatto.model";
 import { ListaSchedeService } from "../lista-schede/lista-schede.service";
 import { ListaSchedeService_FakeJson } from "../lista-schede/lista-schede-fake-json.service";
 import { Router } from "@angular/router";
+import { routerTransition } from '../../router.animations';
 
 
 @Component({
   selector: 'app-lista-schede',
   templateUrl: './lista-schede.component.html',
-  styleUrls: ['./lista-schede.component.css']
+  styleUrls: ['./lista-schede.component.css'],
+  animations: [routerTransition()]
 })
 
  
