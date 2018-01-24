@@ -20,6 +20,7 @@ const routes: Routes = [
        //     { path: 'blank-page-dett', loadChildren: './blank-page/blank-page.module#BlankPageModule', canActivate: [AuthGuard]  },
             { path: 'scheda-contatto/:id', loadChildren: './scheda-contatto/scheda-contatto.module#SchedaContattoModule', canActivate: [AuthGuard]  },
             { path: 'lista-schede', loadChildren: './lista-schede/lista-schede.module#ListaSchedeModule', canActivate: [AuthGuard]  },
+            { path: 'richieste-assistenza', loadChildren: './richieste-assistenza/richieste-assistenza.module#RichiesteAssistenzaModule', canActivate: [AuthGuard]  },
             { path: 'gestione-permessi', loadChildren: './gestione-permessi/gestione-permessi.module#GestionePermessiModule', canActivate: [AuthGuard]  },
             { path: 'form-chiamata', loadChildren: './form-chiamata/form-chiamata.module#FormChiamataModule', canActivate: [AuthGuard]  }
         ]
