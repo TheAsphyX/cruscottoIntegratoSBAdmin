@@ -12,7 +12,7 @@ import { SintesiRichiesteService } from "../../shared/modules/rich-ass/sintesi-r
     animations: [routerTransition()]
 })
 export class RichiesteAssistenzaComponent implements OnInit {
-    private richieste: SintesiRichiesta[] = [];
+    richieste: SintesiRichiesta[] = [];
 
     constructor(private sintesiRichiesteService: SintesiRichiesteService) {}
 
