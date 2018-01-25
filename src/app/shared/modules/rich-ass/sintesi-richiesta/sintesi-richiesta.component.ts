@@ -11,7 +11,7 @@ export class SintesiRichiestaComponent implements OnInit {
   /**
    * Indica se la visualizzazione della richiesta si ferma al primo livello di dettaglio (false) oppure arriva al secondo (true)
    */
-  private espanso: boolean = false;
+  espanso: boolean = false;
 
   @Input() richiesta: SintesiRichiesta;
   @Output() showDettagli: EventEmitter<SintesiRichiesta> = new EventEmitter();
@@ -25,7 +25,7 @@ export class SintesiRichiestaComponent implements OnInit {
    * restituisce un vettore con tanti elementi quanto è la priorità dell'intervento.
    * Utile per eseguire un ngFor con i pallini.
    */
-  private vettorePallini() {
+  vettorePallini() {
     return new Array(this.richiesta.prioritaRichiesta);
   }
 
@@ -33,7 +33,7 @@ export class SintesiRichiestaComponent implements OnInit {
    * restituisce un vettore con tanti elementi quanti sono i buchini della priorità dell'intervento.
    * Utile per eseguire un ngFor con i buchini.
    */
-  private vettoreBuchini() {
+  vettoreBuchini() {
     const MAX_PRIORITA = 5;
     return new Array(MAX_PRIORITA - this.richiesta.prioritaRichiesta);
   }
@@ -41,7 +41,7 @@ export class SintesiRichiestaComponent implements OnInit {
   /**
    * Espande/comprime il livello di dettaglio visualizzato per la richiesta
    */
-  private toggleEspanso(): void {
+  toggleEspanso(): void {
     this.espanso = !this.espanso;
   }
 
@@ -55,18 +55,18 @@ export class SintesiRichiestaComponent implements OnInit {
   /**
    * Restituisce il numero delle squadre
    */
-  private numeroSquadre(): number {
+  numeroSquadre(): number {
     return this.richiesta.squadre.length;
   }
 
   /**
    * Restituisce il vettore con il numero dei mezzi
    */
-  private numeroMezzi(): number {
+  numeroMezzi(): number {
     return this.richiesta.mezzi.length;
   }
 
-  private clickDettagli(): void {
+  clickDettagli(): void {
     console.log("Sono il componente. Vogliono vedere i miei dettagli", this.richiesta.id);
     this.showDettagli.emit(this.richiesta);
   }
