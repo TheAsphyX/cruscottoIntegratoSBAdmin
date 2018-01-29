@@ -1,6 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { SintesiRichiesta } from "./sintesi-richiesta.model";
+import { EventiRichiestaService } from '../../eventi-rich-ass/eventi-richiesta-service/eventi-richiesta.service';
+
+import { EventoRichiesta } from '../../eventi-rich-ass/evento-richiesta/evento-richiesta.model';
+
 
 @Component({
   selector: 'sintesi-richiesta',
@@ -13,12 +17,26 @@ export class SintesiRichiestaComponent implements OnInit {
    */
   espanso: boolean = false;
 
+  elencoEventiRichiesta : EventoRichiesta[] = [];
+
+  display: boolean = false;
+
   @Input() richiesta: SintesiRichiesta;
   @Output() showDettagli: EventEmitter<SintesiRichiesta> = new EventEmitter();
 
-  constructor() { }
+  constructor(private eventiRichiestaService: EventiRichiestaService) { }
 
   ngOnInit() {
+
+    this.eventiRichiestaService.getEventiRichiesta()
+      .subscribe( eventiRichieste => {
+        console.log("eventiRichiestaService: ", eventiRichieste);
+        this.elencoEventiRichiesta = eventiRichieste;
+      });
+  }
+
+  showDialog() {
+    this.display = true;
   }
 
   /**

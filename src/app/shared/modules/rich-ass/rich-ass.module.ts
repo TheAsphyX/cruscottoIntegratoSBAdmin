@@ -25,8 +25,12 @@ import { ListaRichiesteComponent } from './lista-richieste/lista-richieste.compo
 import { ComponenteComponent } from "./componente/componente.component";
 import { MezzoComponent } from "./mezzo/mezzo.component";
 
+import {DialogModule} from 'primeng/primeng';
+
+import { EventiRichAssModule } from '../eventi-rich-ass/eventi-rich-ass.module';
+
 @NgModule({
-    imports: [CommonModule, PopoverModule.forRoot(), TooltipModule.forRoot()],
+    imports: [CommonModule, DialogModule, EventiRichAssModule, PopoverModule.forRoot(), TooltipModule.forRoot()],
     declarations: [SintesiRichiestaComponent, 
                    ListaRichiesteComponent,
                    ComponenteComponent, 

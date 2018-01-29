@@ -274,9 +274,16 @@
     </div>
     <div class="col-md-1">
       <div class="ml-4 mr-0 pr-0 h2">
-        <a href="#">
-							<i class="tasto-dettaglio fa fa-arrow-circle-o-right" aria-hidden="true" title="Vai alla pagina di dettaglio" (click)="clickDettagli()"></i>
-						</a>
+          
+              <div class="ml-4 mr-0 pr-0 h6">
+                  <p-dialog header="Elenco eventi richiesta" [(visible)]="display" [width]="1000">
+                      <app-lista-eventi-richiesta [elencoEventi]="elencoEventiRichiesta"></app-lista-eventi-richiesta>
+
+                  </p-dialog>
+                </div>
+
+							<i class="tasto-dettaglio fa fa-arrow-circle-o-right" aria-hidden="true" title="Vai alla pagina di dettaglio" (click)="showDialog()"></i>
+             
       </div>
     </div>
   </div>
