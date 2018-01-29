@@ -18,7 +18,7 @@ import { EventiRichiestaServiceFake } from '../../shared/modules/eventi-rich-ass
 export class RichiesteAssistenzaComponent implements OnInit {
     richieste: SintesiRichiesta[] = [];
 
-    private elencoEventiRichiesta : EventoRichiesta[] = [];
+    elencoEventiRichiesta : EventoRichiesta[] = [];
 
     constructor(private sintesiRichiesteService: SintesiRichiesteService, private eventiRichiestaService: EventiRichiestaService) {}
 

@@ -10,7 +10,7 @@ import * as moment from 'moment';
 export class ListaEventiRichiestaComponent implements OnInit {
   title = 'Eventi della Richiesta di assistenza';
 
-  private elencoEventiRichiesta : EventoRichiesta[] = [];
+  elencoEventiRichiesta : EventoRichiesta[] = [];
 
   @Input() elencoEventi : EventoRichiesta[];
   

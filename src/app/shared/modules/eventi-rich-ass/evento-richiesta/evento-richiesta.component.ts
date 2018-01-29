@@ -9,7 +9,7 @@ import { EventoRichiesta } from './evento-richiesta.model';
 export class EventoRichiestaComponent implements OnInit {
 
   private espanso: boolean = false;
-  private iconeClasseEventoCorrente: any;
+  iconeClasseEventoCorrente: any;
   private iconeClassiEvento: any ;
   private myMap: any ;
   
