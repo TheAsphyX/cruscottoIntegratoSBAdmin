@@ -26,8 +26,11 @@
         <a [routerLink]="['/lista-schede']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-address-card-o"></i>&nbsp;{{ 'Scheda contatto' | translate }}
         </a>
+        <a [routerLink]="['/mezzi']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-truck"></i>&nbsp;{{ 'Mezzi' | translate }}
+        </a>
         <a [routerLink]="['/richieste-assistenza']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-ambulance"></i>&nbsp;{{ 'Richieste assistenza' | translate }}
+            <i class="fa fa-fire"></i>&nbsp;{{ 'Richieste assistenza' | translate }}
         </a>
         <!--
         <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
