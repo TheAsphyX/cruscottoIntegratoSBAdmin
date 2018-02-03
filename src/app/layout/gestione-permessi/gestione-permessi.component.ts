@@ -39,7 +39,7 @@ export class GestionepermessiComponent implements OnInit {
 
     //private situazionePermessi: SituazionePermessi;
     primeNgTrees = [];
-    private testoRicerca: string;
+    testoRicerca: string;
     checkNodeSelected: boolean = false;
     permessiAssegnati: PermessoAssegnato[];
     

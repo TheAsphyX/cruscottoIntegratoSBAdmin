@@ -11,13 +11,13 @@ import { DescStatoMap } from '../mezzoinservizio/desc-stato-map.class';
 })
 export class ListaMezziComponent implements OnInit {
   private tuttiIMezzi: MezzoInServizio[];
-  private mezziFiltrati: MezzoInServizio[];
+  mezziFiltrati: MezzoInServizio[];
   private mapperDescStato = new DescStatoMap();
   private filtroSedi = {};
-  private filtroDisponibilita = { disponibile: { count: 0, checked: false }, nonDisponibile: { count: 0, checked: false } };
+  filtroDisponibilita = { disponibile: { count: 0, checked: false }, nonDisponibile: { count: 0, checked: false } };
   private filtroStato = {};
   private errorMessage: string;
-  private testoRicerca: string;
+  testoRicerca: string;
 
   constructor(private listaMezziService: ListaMezziService) { }
 
@@ -148,7 +148,7 @@ export class ListaMezziComponent implements OnInit {
   /**
    * Questo metodo viene invocato sul click di una casella di filtraggio disponibile.
    */
-  private selDisponibile(event) {
+  selDisponibile(event) {
     this.filtroDisponibilita.disponibile.checked = event.target.checked;
     this.aggiornaMezziFiltrati();
   }
@@ -156,7 +156,7 @@ export class ListaMezziComponent implements OnInit {
   /**
    * Questo metodo viene invocato sul click di una casella di filtraggio non-disponibile.
    */
-  private selNonDisponibile(event) {
+  selNonDisponibile(event) {
     this.filtroDisponibilita.nonDisponibile.checked = event.target.checked;
     this.aggiornaMezziFiltrati();
   }
@@ -173,7 +173,7 @@ export class ListaMezziComponent implements OnInit {
   /**
    * Restituisce tutte le chiavi dell'oggetto this.filtroSedi, cioè i nomi delle sedi.
    */
-  private getSediKeys() {
+  getSediKeys() {
     return Object.keys(this.filtroSedi);
   }
 
@@ -187,7 +187,7 @@ export class ListaMezziComponent implements OnInit {
   /**
      * Restituisce tutte le chiavi dell'oggetto this.filtroStato, cioè gli stati dei mezzi.
      */
-  private getStatoKeys() {
+  getStatoKeys() {
     return Object.keys(this.filtroStato);
   }
 
@@ -266,7 +266,7 @@ export class ListaMezziComponent implements OnInit {
     });
   }
 
-  private clearSearchText(): void {
+  clearSearchText(): void {
     this.testoRicerca = null;
     this.aggiornaMezziFiltrati();
   }
