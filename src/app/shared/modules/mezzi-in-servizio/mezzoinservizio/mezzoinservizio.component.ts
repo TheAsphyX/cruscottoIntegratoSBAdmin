@@ -28,18 +28,18 @@ export class MezzoinservizioComponent implements OnInit {
     return this.mapperDescStato.map(codice);
   }
 
-  private setDisponibile(isSet: boolean): void {
+  setDisponibile(isSet: boolean): void {
     this.fs.disponibile = isSet;
   }
-  private setCodiceStato(isSet: string): void {
+  setCodiceStato(isSet: string): void {
     this.fs.codiceStato = isSet;
   }
 
-  private numeroPersone(): number {
+  numeroPersone(): number {
     return !!this.fs.personeSulMezzo && this.fs.personeSulMezzo.length;
   }
 
-  private hideMostraPersone(): void {
+  hideMostraPersone(): void {
     this._mostraPersone = !this._mostraPersone;
   }
 
