@@ -1,3 +1,27 @@
-<p>
-  not-found works!
-</p>
+<div class="not-found" [@routerTransition]>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="error-template">
+        <h1>
+            <br>
+            <br>
+            <br>
+          Oops!</h1>
+        <h2>
+          404 Pagina non trovata</h2>
+        <div class="error-details">
+          Spiacente, si è verificato un errore, La pagina richiesta non è stata trovata!
+        </div>
+        <br>
+        <div class="error-actions">
+
+          <a class="btn rounded-btn" [routerLink]="['/dashboard']">
+            <span class="glyphicon glyphicon-home"></span>
+            Home page </a>&nbsp;&nbsp;&nbsp;
+          <a class="btn rounded-btn">
+            <span class="glyphicon glyphicon-envelope"></span> Contatta Assistenza </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
