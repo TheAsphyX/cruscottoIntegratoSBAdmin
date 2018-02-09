@@ -23,6 +23,7 @@ const routes: Routes = [
             { path: 'richieste-assistenza', loadChildren: './richieste-assistenza/richieste-assistenza.module#RichiesteAssistenzaModule', canActivate: [AuthGuard]  },
             { path: 'gestione-permessi', loadChildren: './gestione-permessi/gestione-permessi.module#GestionePermessiModule', canActivate: [AuthGuard]  },
             { path: 'mezzi', loadChildren: './mezzi/mezzi.module#MezziModule', canActivate: [AuthGuard]  },
+            { path: 'composizione-partenza', loadChildren: './composizione-partenza/composizione-partenza.module#ComposizionePartenzaModule', canActivate: [AuthGuard]  },
             { path: 'form-chiamata', loadChildren: './form-chiamata/form-chiamata.module#FormChiamataModule', canActivate: [AuthGuard]  }
         ]
     }
