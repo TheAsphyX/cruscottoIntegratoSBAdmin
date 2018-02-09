@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 import { ComposizionePartenzaRoutingModule } from './composizione-partenza-routing.module';
 import { ComposizionePartenzaComponent } from './composizione-partenza.component';
 
-import { InfoAggregateModule } from '../../shared';
+import { ComposizionePartenzaSharedModule } from '../../shared';
 
 @NgModule({
-    imports: [CommonModule, ComposizionePartenzaRoutingModule],
+    imports: [CommonModule, ComposizionePartenzaRoutingModule, ComposizionePartenzaSharedModule],
     declarations: [ComposizionePartenzaComponent]
 })
-export class ComposizionePartenzaModule {}
+export class ComposizionePartenzaModule { }

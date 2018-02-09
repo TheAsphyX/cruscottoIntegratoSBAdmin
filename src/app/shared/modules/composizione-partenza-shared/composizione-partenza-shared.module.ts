@@ -1,9 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common';
 
-//import { AppComponent } from './app.component';
 import { ComponenteSquadraComponent } from './componente-squadra/componente-squadra.component';
 import { SquadraComponent } from './squadra/squadra.component';
 import { ListaSquadreComponent } from './lista-squadre/lista-squadre.component';
@@ -25,7 +24,6 @@ import { DropAreaComponent } from './drop-area/drop-area.component';
 
 @NgModule({
     declarations: [
-        //   AppComponent,
         ComponenteSquadraComponent,
         SquadraComponent,
         ListaSquadreComponent,
@@ -42,7 +40,7 @@ import { DropAreaComponent } from './drop-area/drop-area.component';
         DropAreaComponent
     ],
     imports: [
-        BrowserModule,
+        CommonModule,
         FormsModule,
         HttpModule
     ],
@@ -56,6 +54,5 @@ import { DropAreaComponent } from './drop-area/drop-area.component';
         CompositoreService,
         DndHandlerService],
 
-    // bootstrap: [AppComponent]
 })
 export class ComposizionePartenzaSharedModule { }
