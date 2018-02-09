@@ -10,7 +10,7 @@ import { Squadra } from '../squadra/squadra.model';
 export class SquadraComponent implements OnInit {
   @Input() squadra: Squadra;
 
-  private espansa: boolean = false;
+  espansa: boolean = false;
 
   constructor() { }
 

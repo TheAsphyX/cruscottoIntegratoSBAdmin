@@ -30,7 +30,7 @@ export class MezzoInPartenzaComponent implements OnInit {
     return this.mezzo.esisteAutista;
   }
 
-  private rimuoviMezzoInPartenza(): void {
+  rimuoviMezzoInPartenza(): void {
     this.mezzo.rimuovi();
   }
 }

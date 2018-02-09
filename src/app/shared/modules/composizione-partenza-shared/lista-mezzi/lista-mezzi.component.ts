@@ -14,7 +14,7 @@ export class ListaMezziComponent implements OnInit {
   ngOnInit() {
   }
 
-  private get mezzi() {
+  get mezzi() {
     return this.listaMezziService.mezzi;
   }
 

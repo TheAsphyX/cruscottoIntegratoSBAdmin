@@ -13,7 +13,7 @@ export class CompositoreComponent implements OnInit {
   ngOnInit() {
   }
 
-  private get mezziInPartenza() {
+  get mezziInPartenza() {
     return this.compositoreService.mezziInPartenza;
   }
 }
